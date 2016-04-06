@@ -93,18 +93,32 @@ noremap <C-S-v> "*P
 nnoremap <c-o> :action Back<cr>
 nnoremap <c-i> :action Forward<cr>
 " but preserve ideavim defaults
-nnoremap g<c-o> <c-o>
-nnoremap g<c-i> <c-i>
+nnoremap <C-S-o> <c-o>
+nnoremap <C-S-i> <c-i>
 
 " generate
-nnoremap <leader>gS :action Actions.ActionsPlugin.GenerateToString<CR>
-nnoremap <leader>gg :action GenerateGetter<CR>
-nnoremap <leader>gs :action GenerateSetter<CR>
+nnoremap <leader>gt :action GenerateTestMethod<CR>
+nnoremap <leader>gs :action GenerateSetUpMethod<CR>
+nnoremap <leader>gG :action GenerateGetter<CR>
+nnoremap <leader>gS :action GenerateSetter<CR>
 nnoremap <leader>ga :action GenerateGetterAndSetter<CR>
 nnoremap <leader>ge :action GenerateEquals<CR>
 nnoremap <leader>gc :action GenerateConstructor<CR>
 nnoremap <leader>G :action Generate<CR>
 
 " enter newlines
-nnoremap <CR> o<Esc>
-inoremap <CR> <Esc>o
+nnoremap <CR> :action EditorEnter<CR>
+inoremap <CR> <C-o>:action EditorEnter<CR>
+
+" windows
+nnoremap gwm :action ActivateEventLogToolWindow<CR>
+nnoremap gwg :action ActivateGradleToolWindow<CR>
+
+" imaps
+inoremap <C-S-c> {@code }<C-o>h
+inoremap <C-S-k> <C-o>k
+inoremap <C-S-j> <C-o>j
+inoremap <C-S-l> <C-o>l
+inoremap <C-S-h> <C-o>h
+inoremap <C-a> <Esc>I
+inoremap <C-e> <Esc>A
