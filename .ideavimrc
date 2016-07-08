@@ -150,3 +150,7 @@ nnoremap p :Stepout
 nnoremap n :action ToggleLineBreakpoint<CR>
 nnoremap m :action ToggleMethodBreakpoint<CR>
 nnoremap <CR> :action Resume<CR>
+
+" templates
+inoremap <C-k> <C-o>:action NextTemplateVariable<CR>
+inoremap <C-j> <C-o>:action PreviousTemplateVariable<CR>
