@@ -2,16 +2,19 @@ let mapleader = '-'
 
 set hlsearch
 set scrolloff=3
-set ignorecase smartcase
+set smartcase
 set showmode
 set history=1000
+set surround " activate the vim-surround key bindings"
 
 " maps
-
 nnoremap <C-l> <C-w>l
 nnoremap <C-k> <C-w>k
 nnoremap <C-j> <C-w>j
 nnoremap <C-h> <C-w>h
+
+nnoremap gh gT
+nnoremap gl gt
 
 " onoremap iv i[
 " onoremap av a[
@@ -113,12 +116,37 @@ inoremap <CR> <C-o>:action EditorEnter<CR>
 " windows
 nnoremap gwm :action ActivateEventLogToolWindow<CR>
 nnoremap gwg :action ActivateGradleToolWindow<CR>
+nnoremap gwd :action ActivateDebugToolWindow<CR>
+nnoremap gwr :action ActivateRunToolWindow<CR>
+nnoremap gwb :action ViewBreakpoints<CR>
 
 " imaps
-inoremap <C-S-c> {@code }<C-o>h
+inoremap <C-A-c> {@code }<C-o>h
 inoremap <C-S-k> <C-o>k
 inoremap <C-S-j> <C-o>j
 inoremap <C-S-l> <C-o>l
 inoremap <C-S-h> <C-o>h
 inoremap <C-a> <Esc>I
 inoremap <C-e> <Esc>A
+
+nnoremap gjK :action QuickJavaDoc<CR>
+nnoremap ]] :action MethodDown<CR>
+nnoremap [[ :action MethodUp<CR>
+
+nnoremap <Space> :nohl<CR>
+nnoremap <leader>R :action Rerun<CR>
+nnoremap <leader>rt :action RerunTests<CR>
+nnoremap <leader>rf :action RerunFailedTests<CR>
+
+nnoremap <leader>go :action OverrideMethods<CR>
+nnoremap <leader>d 0w:action ShowIntentionActions<CR>
+
+nnoremap <leader>gn :action NewClass<CR>
+
+" debugger
+nnoremap i :ForceStepInto
+nnoremap o :ForceStepOver
+nnoremap p :Stepout
+nnoremap n :action ToggleLineBreakpoint<CR>
+nnoremap m :action ToggleMethodBreakpoint<CR>
+nnoremap <CR> :action Resume<CR>
