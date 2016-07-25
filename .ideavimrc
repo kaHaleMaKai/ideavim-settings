@@ -122,6 +122,7 @@ nnoremap gwb :action ViewBreakpoints<CR>
 
 " imaps
 inoremap <C-A-c> {@code }<C-o>h
+inoremap <C-A-l> {@link }<C-o>h
 inoremap <C-S-k> <C-o>k
 inoremap <C-S-j> <C-o>j
 inoremap <C-S-l> <C-o>l
