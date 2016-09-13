@@ -129,6 +129,7 @@ inoremap <C-S-l> <C-o>l
 inoremap <C-S-h> <C-o>h
 inoremap <C-a> <Esc>I
 inoremap <C-e> <Esc>A
+inoremap <C-p> <Esc>o\<p><Esc>lDo<Esc>0wlC<Space>
 
 nnoremap gjK :action QuickJavaDoc<CR>
 nnoremap ]] :action MethodDown<CR>
