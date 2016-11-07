@@ -35,7 +35,7 @@ nnoremap <C-S-u> :action HighlightUsagesInFile<cr>
 
 " code refactoring
 nnoremap cre :action RenameElement<cr>
-nnoremap cs :action ChangeSignature<cr>
+nnoremap cS :action ChangeSignature<cr>
 nnoremap cts :action ChangeTypeSignature<cr>
 
 " unimpaired mappings
