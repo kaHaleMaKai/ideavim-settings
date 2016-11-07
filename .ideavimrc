@@ -114,6 +114,7 @@ nnoremap <CR> :action EditorEnter<CR>
 inoremap <CR> <C-o>:action EditorEnter<CR>
 
 " windows
+nnoremap gwa :action ActivateAntBuildToolWindow<CR>
 nnoremap gwm :action ActivateEventLogToolWindow<CR>
 nnoremap gwg :action ActivateGradleToolWindow<CR>
 nnoremap gwd :action ActivateDebugToolWindow<CR>
