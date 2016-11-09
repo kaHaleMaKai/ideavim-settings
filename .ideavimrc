@@ -1,7 +1,8 @@
 let mapleader = '-'
 
 set hlsearch
-set scrolloff=3
+set incsearch
+set scrolloff=2
 set smartcase
 set showmode
 set history=1000
