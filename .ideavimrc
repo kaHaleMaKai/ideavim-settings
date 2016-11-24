@@ -31,7 +31,7 @@ nnoremap <c-tab> gt
 nnoremap <C-w>x :vs<CR>:q<C-w>l
 nnoremap <C-w>v :vs<CR>:q<C-w>j
 
-nnoremap <C-u> :action FindUsages<cr>
+nnoremap <C-k> :action ShowUsages<cr>
 nnoremap <C-S-u> :action HighlightUsagesInFile<cr>
 
 " code refactoring
