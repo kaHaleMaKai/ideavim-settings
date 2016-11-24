@@ -121,6 +121,7 @@ nnoremap gwg :action ActivateGradleToolWindow<CR>
 nnoremap gwd :action ActivateDebugToolWindow<CR>
 nnoremap gwr :action ActivateRunToolWindow<CR>
 nnoremap gwb :action ViewBreakpoints<CR>
+nnoremap gwp :action ActivateProjectToolWindow<CR>
 
 " imaps
 inoremap <C-A-c> {@code }<C-o>h
