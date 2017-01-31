@@ -160,3 +160,5 @@ nnoremap p :action ShowExecutionPoint<CR>
 " templates
 inoremap <C-k> <C-o>:action NextTemplateVariable<CR>
 inoremap <C-j> <C-o>:action PreviousTemplateVariable<CR>
+
+nnoremap cv ^2cEval<ESC>b
