@@ -8,12 +8,6 @@ set showmode
 set history=1000
 set surround " activate the vim-surround key bindings"
 
-" maps
-nnoremap <C-l> <C-w>l
-nnoremap <C-k> <C-w>k
-nnoremap <C-j> <C-w>j
-nnoremap <C-h> <C-w>h
-
 nnoremap gh gT
 nnoremap gl gt
 
@@ -25,13 +19,20 @@ nnoremap <c-l> <c-w>l
 nnoremap <c-j> <c-w>j
 nnoremap <c-h> <c-w>h
 nnoremap <c-k> <c-w>k
-nnoremap gr gT
-nnoremap <c-s-tab> gT
-nnoremap <c-tab> gt
-nnoremap <C-w>x :vs<CR>:q<C-w>l
-nnoremap <C-w>v :vs<CR>:q<C-w>j
+nnoremap <C-w>x :action MoveTabDown<CR>
+nnoremap <C-w>v :action MoveTabRight<CR>
+nnoremap <C-w>X :action SplitHorizontally<CR>
+nnoremap <C-w>V :action SplitVertically<CR>
+nnoremap <C-w>u :action Unsplit<CR>
+nnoremap <C-w>q :q<CR>
+nnoremap <C-w>U :action UnsplitAll<CR>
 
-nnoremap <C-k> :action ShowUsages<cr>
+" tabs
+nnoremap gr gT
+nnoremap <c-tab> gt
+nnoremap <c-s-tab> gT
+
+nnoremap <C-S-k> :action ShowUsages<cr>
 nnoremap <C-S-u> :action HighlightUsagesInFile<cr>
 
 " code refactoring
@@ -72,10 +73,10 @@ nnoremap gb9 :action GotoBookmark9<CR>
 nnoremap gjl :action GoToLinkTarget<CR>
 
 nnoremap gnb :action GotoNextBookmark<CR>
-nnoremap gne :action GotoNextError<CR>
+nnoremap ]q :action GotoNextError<CR>
 nnoremap gnx :action GotoNextIncompletePropertyAction<CR>
 nnoremap gpb :action GotoPreviousBookmark<CR>
-nnoremap gep :action GotoPreviousError<CR>
+nnoremap [q :action GotoPreviousError<CR>
 
 " will be replaced as soon as onoremap works
 nnoremap civ ci[
@@ -92,6 +93,8 @@ noremap "+p "*p
 noremap "+P "*P
 noremap <C-S-c> "*y
 noremap <C-S-v> "*P
+inoremap <C-S-v> <C-o>"+P<Right>
+vnoremap <C-s-c> "+y
 
 " built-in navigation to navigated items works better
 nnoremap <c-o> :action Back<cr>
